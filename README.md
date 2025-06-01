@@ -14,7 +14,7 @@ Managers, baristas, and decision makers get fast answers without digging through
 ## 📁 Datasets Used
 | File | Description |
 |------|-------------|
-| [`data/orders.csv`](data/orders.csv) | Order-level records with dates, quantities, sales, and profit |
+| <a href= "https://github.com/Arnold1AB/Coffee-Dashboard-Report/blob/main/Coffee%20Data%20Project%20-%20cleaned%20datasets%20orders.csv"> `Orders Dataset`</a> | Order-level records with dates, quantities, sales, and profit |
 | [`data/products.csv`](data/products.csv) | Product catalog with roast type and size |
 | [`data/customers.csv`](data/customers.csv) | Customer IDs and loyalty status |
 | [`Dashboard & Pivot Tables.xlsx`](Dashboard%20&%20Pivot%20Tables.xlsx) | Excel workbook containing pivot tables and the final dashboard |
