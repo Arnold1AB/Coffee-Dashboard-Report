@@ -1,10 +1,8 @@
-# Coffee-Dashboard-Report
-The Coffee Data Project analyzes sales, customer behavior, and product performance to deliver actionable insights through a dynamic dashboard.
-
----
 # ☕ Horizon Coffee Sales Dashboard
 
-Beyond daily reporting, the **Horizon Coffee Dashboard** acts as a strategic compass for decision-making. By continuously tracking key performance indicators (KPIs), the team can uncover growth opportunities, detect inefficiencies early, and react quickly to market shifts.
+Beyond daily reporting, the **Horizon Coffee Dashboard** looks at sales, customer activity, and product performance to help the business understand what’s working and what’s not. Using cleaned data from orders, products, and customers, it creates a clear and easy-to-use dashboard. This helps teams make better decisions, improve sales, and plan for growth.
+
+---
 
 ## 🎯 Project Objective
 The Horizon Coffee Sales Dashboard helps the business see how well different roast types and package sizes sell, how much profit is earned, and which regions or customers drive revenue. It converts thousands of transactions into easy-to-read visuals that highlight trends, compare results, and reveal what works or does not. With just a few clicks, users can explore which roast sells best, which country brings in the most money, or which months are busiest for sales.
@@ -33,26 +31,25 @@ _All sensitive information has been removed or anonymized._
 
 ## 🧭 Process Workflow
 1. **Data Collection**  
-   Exported raw order, product, and customer tables from the café POS into CSV.
+   Exported raw order, product, and customer tables from Kaggle Datasets.
 
 2. **Data Cleaning & Structuring**  
-   Removed duplicates, fixed date formats, standardized country names, and filled in missing values.
+   Removed duplicates, modify names into full names, standardized country names, and filled in missing values.
 
 3. **Data Aggregation**  
-   The **Coffee Data Project – Cleaned Datasets Orders** sheet was enriched with customer and product attributes, plus calculated metrics, using the following formulas (unchanged here for reference):
+   The **Coffee Data Project – Cleaned Datasets Orders** sheet was enriched with customer and product attributes, plus calculated metrics, using the following formulas:
 
    | Purpose | Formula |
    |---------|---------|
-   | **Return Customer Name** | `=XLOOKUP(C2,customers!$A$2:$A$1001,customers!$B$2:$B$1001,0)` |
-   | **Return Customer Email** | `=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,0))` |
-   | **Return Customer Phone** | `=XLOOKUP(C2,customers!$A$2:$A$1001,customers!$G$2:$G$1001,0)` |
-   | **Return Loyalty Card (Yes/No)** | `=XLOOKUP(orders!$C2,customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)` |
-   | **Return Coffee Type Code** | `=INDEX(products!$A$1:$H$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$H$1,0))` |
-   | **Return Roast Type Code** | `=INDEX(products!$A$1:$H$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!J$1,products!$A$1:$H$1,0))` |
+   | **Customer Name** | `=XLOOKUP(C2,customers!$A$2:$A$1001,customers!$B$2:$B$1001,0)` |
+   | **Customer Email** | `=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,0))` |
+   | **Loyalty Card (Yes/No)** | `=XLOOKUP(orders!$C2,customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)` |
+   | **Coffee Type Code** | `=INDEX(products!$A$1:$H$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$H$1,0))` |
+   | **Roast Type Code** | `=INDEX(products!$A$1:$H$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!J$1,products!$A$1:$H$1,0))` |
    | **Sales (Value)** | *Quantity × Unit Price* |
    | **Profit (Value)** | *Unit Price × Price per 100 g* |
-   | **Decode Coffee Type Name** | `=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica"))))` |
-   | **Decode Roast Type Name** | `=IF(J2="M","Medium",IF(J2="L","Large",IF(J2="D","Dark","")))` |
+   | **Coffee Type Name** | `=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica"))))` |
+   | **Roast Type Name** | `=IF(J2="M","Medium",IF(J2="L","Large",IF(J2="D","Dark","")))` |
 
 4. **Dashboard Design**  
    The finished Excel dashboard combines several visual elements to keep insights clear and intuitive:
@@ -62,18 +59,18 @@ _All sensitive information has been removed or anonymized._
    | **Timeline slicer** | Interactive date filter lets users slide through years, quarters, or months and instantly update every chart. |
    | **Scorecards (KPI cards)** | Display single high-level numbers—Total Sales, Total Profit, Quantity Sold, and Profit Margin—so performance is clear at a glance. |
    | **Vertical bar chart** | Shows *Sales & Profit by Month* to reveal seasonal spikes and dips. |
-   | **Horizontal bar chart** | Compares *Sales by Country* side-by-side, highlighting the United States outlier. |
+   | **Vertical bar chart** | Compares *Sales by Country* side-by-side, highlighting the United States outlier. |
    | **Line chart** | Plots *Total Sales Over Time* (separate colored lines for each coffee type) to expose long-term growth trends and product volatility. |
 
-   A consistent coffee-brown palette and clear labels keep the visuals on brand and easy to interpret.
+   **A consistent coffee-brown palette and clear labels keep the visuals on brand and easy to interpret.**
 
 5. **User Interactivity**  
    - Slicers for date, roast type, size, and loyalty card allow quick drill-down.  
-   - An interactive version of the dashboard is hosted on Google Drive: **[Coffee Data project – Dashboard & Pivot Tables](https://docs.google.com/spreadsheets/d/1s6qi2ya9JtE3qqRXDyeL5gQdFMK9hRFF/edit?usp=sharing&ouid=104140290870922976550&rtpof=true&sd=true)**.  
+   - An interactive version of the dashboard is hosted on Google Drive: **[Coffee Data project – Dashboard & Pivot Tables](https://docs.google.com/spreadsheets/d/1s6qi2ya9JtE3qqRXDyeL5gQdFMK9hRFF/edit?usp=drive_link&ouid=104140290870922976550&rtpof=true&sd=true)**.  
      **Important:** download and open this file in **Excel 2013 or later**—Google Sheets cannot render the timeline slicer, KPI scorecards, or pivot-table-driven charts correctly.
 
 ## 📊 Dashboard Snapshot
-![Horizon Coffee Dashboard](images/Sales%20Coffee%20Dashboard%20Screenshot.png)
+![Horizon Coffee Dashboard](https://github.com/Arnold1AB/Coffee-Dashboard-Report/blob/main/Sales%20Coffee%20Dashboard%20Screenshot.png)
 
 ## 📈 Key Insights
 - **Total Sales**: $45,134  
