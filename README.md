@@ -67,7 +67,7 @@ _All sensitive information has been removed or anonymized._
 5. **User Interactivity**  
    - Slicers for date, roast type, size, and loyalty card allow quick drill-down.  
    - An interactive version of the dashboard is hosted on Google Drive: **[Coffee Data project – Dashboard & Pivot Tables](https://docs.google.com/spreadsheets/d/1s6qi2ya9JtE3qqRXDyeL5gQdFMK9hRFF/edit?usp=drive_link&ouid=104140290870922976550&rtpof=true&sd=true)**.  
-     **Important:** download and open this file in **Excel 2013 or later**—Google Sheets cannot render the timeline slicer, KPI scorecards, or pivot-table-driven charts correctly.
+     **Important:** Download and open this file in **Excel 2013 or later**—Google Sheets cannot render the timeline slicer, KPI scorecards, or pivot-table-driven charts correctly.
 
 ## 📊 Dashboard Snapshot
 ![Horizon Coffee Dashboard](https://github.com/Arnold1AB/Coffee-Dashboard-Report/blob/main/Sales%20Coffee%20Dashboard%20Screenshot.png)
